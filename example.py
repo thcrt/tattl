@@ -64,7 +64,7 @@ class Structure:
     fruits: dict[str, Fruit]
 
 
-data = tattl.unpack(tomllib.loads(my_toml), Structure)
+data = tattl.unpack_dict(tomllib.loads(my_toml), Structure)
 
 pp(data)
 

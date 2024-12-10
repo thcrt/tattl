@@ -58,7 +58,7 @@ def test_example():
     import tattl
     import tomllib
 
-    data = tattl.unpack(tomllib.loads(EXAMPLE_TOML), BaseStructure)
+    data = tattl.unpack_dict(tomllib.loads(EXAMPLE_TOML), BaseStructure)
     print(data)
     assert data == BaseStructure(
         project=BaseStructure.ProjectStructure(
