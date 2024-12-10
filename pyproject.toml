@@ -1,7 +1,7 @@
 [project]
-name = "tasl"
+name = "tattl"
 version = "0.1.0"
-description = "Type-Annotated Settings Loader"
+description = "Totally Awesome Type-aware TOML Loader"
 readme = "README.md"
 authors = [
     { name = "thcrt", email = "110127860+thcrt@users.noreply.github.com" }
@@ -21,7 +21,7 @@ dev = [
 ]
 
 [tool.mypy]
-packages = "tasl"
+packages = "tattl"
 strict = true
 
 [tool.pytest.ini_options]

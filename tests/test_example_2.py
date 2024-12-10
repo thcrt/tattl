@@ -31,9 +31,9 @@ class BaseStructure:
 
 EXAMPLE_TOML = """
 [project]
-name = "tasl"
+name = "tattl"
 version = "dev"
-description = "Type-Annotated Settings Loader"
+description = "Totally Awesome Type-aware TOML Loader"
 readme = "README.md"
 authors = [
     { name = "thcrt", email = "110127860+thcrt@users.noreply.github.com" }
@@ -55,16 +55,16 @@ dev = [
 
 
 def test_example():
-    import tasl
+    import tattl
     import tomllib
 
-    data = tasl.unpack(tomllib.loads(EXAMPLE_TOML), BaseStructure)
+    data = tattl.unpack(tomllib.loads(EXAMPLE_TOML), BaseStructure)
     print(data)
     assert data == BaseStructure(
         project=BaseStructure.ProjectStructure(
-            name="tasl",
+            name="tattl",
             version="dev",
-            description="Type-Annotated Settings Loader",
+            description="Totally Awesome Type-aware TOML Loader",
             readme="README.md",
             authors=[
                 BaseStructure.ProjectStructure.AuthorStructure(

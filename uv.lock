@@ -110,7 +110,7 @@ wheels = [
 ]
 
 [[package]]
-name = "tasl"
+name = "tattl"
 version = "0.1.0"
 source = { editable = "." }
 

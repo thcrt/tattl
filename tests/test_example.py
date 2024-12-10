@@ -58,10 +58,10 @@ role = "backend"
 
 
 def test_example():
-    import tasl
+    import tattl
     import tomllib
 
-    data = tasl.unpack(tomllib.loads(EXAMPLE_TOML), BaseStructure)
+    data = tattl.unpack(tomllib.loads(EXAMPLE_TOML), BaseStructure)
     print(data)
     assert data == BaseStructure(
         title="TOML Example",
@@ -87,47 +87,3 @@ def test_example():
             "beta": BaseStructure.ServerStructure(ip="10.0.0.2", role="backend"),
         },
     )
-
-
-# @dataclass
-# class PyProjectStructure:
-#     @dataclass
-#     class ProjectStructure:
-#         name: str
-#         version: str
-#         description: str
-#         readme: str
-
-#         @dataclass
-#         class AuthorStructure:
-#             name: str
-#             email: str
-
-#         authors: list[AuthorStructure]
-#         requires_python: str = field(metadata={"name": "requires-python"})
-#         dependencies: list
-
-#     project: ProjectStructure
-
-#     @dataclass
-#     class BuildSystemStructure:
-#         requires: list[str]
-#         build_backend: str = field(metadata={"name": "build-backend"})
-
-#     build_system: BuildSystemStructure = field(metadata={"name": "build-system"})
-
-
-# def main() -> None:
-#     with open("example.toml", "rb") as f:
-#         data = tomllib.load(f)
-#         pp(tasl.unpack(data, BaseStructure))
-
-#     print()
-
-#     with open("pyproject.toml", "rb") as f:
-#         data = tomllib.load(f)
-#         pp(tasl.unpack(data, PyProjectStructure))
-
-
-# if __name__ == "__main__":
-#     main()

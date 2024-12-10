@@ -1,4 +1,4 @@
-import tasl
+import tattl
 import tomllib
 
 from dataclasses import dataclass, field
@@ -64,7 +64,7 @@ class Structure:
     fruits: dict[str, Fruit]
 
 
-data = tasl.unpack(tomllib.loads(my_toml), Structure)
+data = tattl.unpack(tomllib.loads(my_toml), Structure)
 
 pp(data)
 

@@ -1,8 +1,8 @@
-# TASL: a Type-Annotated Settings Loader
+# TATTL: a Totally Awesome Type-aware TOML Loader
 
 ## Usage example
 ```python
-import tasl
+import tattl
 import tomllib
 
 from dataclasses import dataclass, field
@@ -68,7 +68,7 @@ class Structure:
     fruits: dict[str, Fruit]
 
 
-data = tasl.unpack(tomllib.loads(my_toml), Structure)
+data = tattl.unpack(tomllib.loads(my_toml), Structure)
 
 pp(data)
 
