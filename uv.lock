@@ -111,7 +111,7 @@ wheels = [
 
 [[package]]
 name = "tattl"
-version = "0.1.0"
+version = "0.2.1.dev1+g322c21f.d20241210"
 source = { editable = "." }
 
 [package.dev-dependencies]

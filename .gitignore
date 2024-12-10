@@ -11,3 +11,7 @@ wheels/
 
 # Tool caches
 .*_cache
+
+# Version file generated with hatch-vcs
+# See https://github.com/ofek/hatch-vcs
+_version.py

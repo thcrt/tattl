@@ -1,6 +1,6 @@
 [project]
 name = "tattl"
-version = "0.2.0"
+dynamic = ["version"]
 description = "Totally Awesome Type-aware TOML Loader"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -30,7 +30,7 @@ Issues = "https://github.com/thcrt/tattl/issues"
 PyPI = "https://pypi.org/project/tattl/"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
@@ -39,6 +39,12 @@ dev = [
     "pytest>=8.3.4",
     "ruff>=0.8.2",
 ]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/tattl/_version.py"
 
 [tool.mypy]
 packages = "tattl"
