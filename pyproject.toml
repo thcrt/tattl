@@ -25,9 +25,9 @@ classifiers = [
 ]
 
 [project.urls]
-github = "https://github.com/thcrt/tattl"
-issues = "https://github.com/thcrt/tattl/issues"
-pypi = "https://pypi.org/project/tattl/"
+Source = "https://github.com/thcrt/tattl"
+Issues = "https://github.com/thcrt/tattl/issues"
+PyPI = "https://pypi.org/project/tattl/"
 
 [build-system]
 requires = ["hatchling"]
