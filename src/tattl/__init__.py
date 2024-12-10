@@ -20,6 +20,5 @@ except (ImportError, LookupError):
         # The user is probably trying to run this without having installed
         # the package, so complain.
         raise RuntimeError(
-            "Hatch VCS Footgun Example is not correctly installed. "
-            "Please install it with pip."
+            "tattl is not correctly installed. Install it with pip or uv."
         )
