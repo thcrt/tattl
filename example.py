@@ -1,7 +1,3 @@
-# TASL: a Type-Annotated Settings Loader
-
-## Usage example
-```python
 import tasl
 import tomllib
 
@@ -90,5 +86,3 @@ pp(data)
 #                                   tastes=['sweet', 'sour']),
 #                   'mangoes': Fruit(color='orange',
 #                                    tastes=['sweet', 'citrus'])})
-
-```
