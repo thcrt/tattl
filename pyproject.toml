@@ -1,6 +1,6 @@
 [project]
 name = "tattl"
-version = "0.1.0"
+version = "0.2.0"
 description = "Totally Awesome Type-aware TOML Loader"
 readme = "README.md"
 license = { file = "LICENSE" }
