@@ -15,3 +15,6 @@ wheels/
 # Version file generated with hatch-vcs
 # See https://github.com/ofek/hatch-vcs
 _version.py
+
+# Created during CI for running Prettier
+node_modules/

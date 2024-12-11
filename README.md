@@ -1,6 +1,7 @@
 # TATTL: a Totally Awesome Type-aware TOML Loader
 
 ## Usage example
+
 ```python
 import tattl
 import tomllib
