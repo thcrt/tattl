@@ -39,7 +39,6 @@ html_theme_options = {
     "source_directory": "docs/",
 }
 
-html_static_path = ["_static"]
 html_title = f"{project} docs"
 html_last_updated_fmt = "%b %d, %Y"
 
