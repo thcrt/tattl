@@ -35,7 +35,7 @@ jobs:
 
       - name: Build documentation
         run: |
-          uv run sphinx-multiversion docs docs/_build
+          uv run sphinx-multiversion -D smv_latest_version=$(git tag -l --sort=version:refname | tail -n 1) docs docs/_build
           touch docs/_build/.nojekyll
           cp docs/index-redirect.html docs/_build/index.html
           ln -srf docs/_build/$(git tag -l --sort=version:refname | tail -n 1) docs/_build/latest

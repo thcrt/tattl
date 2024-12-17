@@ -47,6 +47,8 @@ html_static_path = ["_static"]
 html_css_files = ["css/versions.css"]
 html_js_files = ["js/versions.js"]
 
+smv_released_pattern = r'^refs/tags/.*$'
+
 add_function_parentheses = False
 
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
