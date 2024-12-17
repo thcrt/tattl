@@ -21,6 +21,7 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx_paramlinks",
     "sphinx.ext.autodoc.typehints",
+    "sphinx_multiversion",
 ]
 
 highlight_language = "python3"
@@ -41,6 +42,14 @@ html_theme_options = {
 
 html_title = f"{project} docs"
 html_last_updated_fmt = "%b %d, %Y"
+
+html_static_path = ["_static"]
+html_css_files = [
+    "css/versions.css"
+]
+html_js_files = [
+    "js/versions.js"
+]
 
 add_function_parentheses = False
 
