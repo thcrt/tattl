@@ -44,12 +44,8 @@ html_title = f"{project} docs"
 html_last_updated_fmt = "%b %d, %Y"
 
 html_static_path = ["_static"]
-html_css_files = [
-    "css/versions.css"
-]
-html_js_files = [
-    "js/versions.js"
-]
+html_css_files = ["css/versions.css"]
+html_js_files = ["js/versions.js"]
 
 add_function_parentheses = False
 

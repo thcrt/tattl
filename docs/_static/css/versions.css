@@ -26,7 +26,7 @@
     margin-top: 0;
 }
 
-#furo-versions input[type=checkbox] {
+#furo-versions input[type="checkbox"] {
     display: none;
     position: absolute;
     box-sizing: border-box;
@@ -34,7 +34,7 @@
     overflow: visible;
 }
 
-#furo-versions input[type=checkbox]:checked~ul {
+#furo-versions input[type="checkbox"]:checked ~ ul {
     display: inline-block;
     line-height: var(--sidebar-item-line-height);
     margin-left: var(--sidebar-item-spacing-horizontal);

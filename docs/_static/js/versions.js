@@ -4,15 +4,12 @@
 */
 
 function setupVersionDropdown() {
-
     const checkboxInput = document.getElementById("checkbox_toggle");
-    
+
     if (localStorage.getItem("version-dropdown-opened") === "true") {
         checkboxInput.checked = true;
     }
-    
-    
-    
+
     const checkbox = document.getElementById("versions-label");
     checkbox.addEventListener("click", toggleDropdown);
 
