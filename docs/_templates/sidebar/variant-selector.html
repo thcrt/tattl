@@ -29,10 +29,10 @@
     <ul id="versions-children">
         {% for version in versions|reverse -%}
         <li {% if version.name == current_version.name %} class="current-version" {%- endif %} >
-            {% if version.name == latest_version.name -%}
-                <b>Latest: </b>
-            {%- endif %}
             <a href="{{ version.url }}"> {{ version.name }} </a>
+            {% if version.name == latest_version.name -%}
+                <b> (latest)</b>
+            {%- endif %}
         </li>
         {% endfor -%}
     </ul>
