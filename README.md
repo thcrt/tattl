@@ -18,10 +18,10 @@ modern type annotations.
     <img alt="Static Badge" src="https://img.shields.io/badge/Read the - Documentation%20-%20blue?style=for-the-badge">
 </a>
 
-
 ## Installation
 
-Install TATTL with your favourite Python package manager. We recommend [`uv`](https://docs.astral.sh/uv/), but `pip` works too.
+Install TATTL with your favourite Python package manager. We recommend
+[`uv`](https://docs.astral.sh/uv/), but `pip` works too.
 
 ```sh
 pip install tattl
@@ -33,7 +33,8 @@ uv add tattl
 
 ## Get started
 
-TATTL will take some TOML-structured data and transform it into an instance of a dataclass while validating type annotations. As a basic example:
+TATTL will take some TOML-structured data and transform it into an instance of a dataclass while
+validating type annotations. As a basic example:
 
 ```python
 import tattl
