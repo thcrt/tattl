@@ -21,3 +21,6 @@ node_modules/
 
 # Documentation build directory
 docs/_build
+
+# Cache used by Task to fingerprint runs
+.task/
