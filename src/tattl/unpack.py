@@ -5,7 +5,7 @@ import inspect
 
 from typing import Any
 
-from .exceptions import ValidationException
+from .exceptions import ValidationException, MissingFieldException
 
 
 if typing.TYPE_CHECKING:
@@ -68,6 +68,8 @@ def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) 
 
     :raises ValidationException: Raised when a value in :paramref:`data` has a type that differs
         from that of the :class:`~dataclasses.Field` with the same name in :paramref:`structure`.
+    :raises MissingFieldException: Raised when a :class:`~dataclasses.Field` in :paramref:`structure`
+        without a default initialisation or factory is missing from :paramref:`data`.
     :return: An instance of :paramref:`structure`, with attributes corresponding to the contents of
         :paramref:`data`.
     """
@@ -83,7 +85,15 @@ def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) 
         # satisfy mypy. We could use `field.type`, but that could be a `str`.
         field_type = resolved_type_hints[field.name]
 
-        if dataclasses.is_dataclass(annotations[field.name]):
+        if alias not in data:
+            if field.default is not dataclasses.MISSING:
+                unpacked[field.name] = field.default
+            elif field.default_factory is not dataclasses.MISSING:
+                unpacked[field.name] = field.default_factory()
+            else:
+                raise MissingFieldException
+
+        elif dataclasses.is_dataclass(annotations[field.name]):
             unpacked[field.name] = unpack_dict(data[alias], field_type)
 
         elif isinstance(field_type, types.GenericAlias):
