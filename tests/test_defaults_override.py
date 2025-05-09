@@ -19,7 +19,12 @@ class Structure:
 
 
 EXAMPLE_TOML = """
-# There's nothing here! Hopefully we see our defaults in use.
+foo = "BBB"
+bar = 234
+baz = false
+qux = [ "Hello", "World" ]
+cor = { snork = 2.34, blarg = 5.67, wibble = 8.90 }
+gra = [ 1, 121, 12321, 1234321 ]
 """
 
 
@@ -30,10 +35,10 @@ def test_example():
     data = tattl.unpack_dict(tomllib.loads(EXAMPLE_TOML), Structure)
     print(data)
     assert data == Structure(
-        foo="AAA",
-        bar=123,
-        baz=True,
-        qux=[],
-        cor={"spam": 1.23, "ham": 4.56, "eggs": 7.89},
-        gra=[1, 1, 2, 3, 5, 8]
+        foo="BBB",
+        bar=234,
+        baz=False,
+        qux=["Hello", "World"],
+        cor={"snork": 2.34, "blarg": 5.67, "wibble": 8.90},
+        gra=[1, 121, 12321, 1234321]
     )
