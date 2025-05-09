@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 def my_dict_factory():
     return {"spam": 1.23, "ham": 4.56, "eggs": 7.89}
 
+
 def my_list_factory():
     return [1, 1, 2, 3, 5, 8]
 
@@ -35,5 +36,5 @@ def test_example():
         baz=True,
         qux=[],
         cor={"spam": 1.23, "ham": 4.56, "eggs": 7.89},
-        gra=[1, 1, 2, 3, 5, 8]
+        gra=[1, 1, 2, 3, 5, 8],
     )
