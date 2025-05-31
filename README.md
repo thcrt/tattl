@@ -6,7 +6,7 @@
 [<img alt="License Badge" src="https://img.shields.io/pypi/l/tattl?style=for-the-badge&color=blue">](./LICENSE)
 
 [<img alt="Build Status Badge" src="https://img.shields.io/github/actions/workflow/status/thcrt/tattl/publish.yml?event=release&style=for-the-badge">](https://github.com/thcrt/tattl/actions/workflows/publish.yml)
-[<img alt="Maintenance Status Badge" src="https://img.shields.io/maintenance/yes/2024?style=for-the-badge">](https://github.com/thcrt/tattl/pulse)
+[<img alt="Maintenance Status Badge" src="https://img.shields.io/maintenance/yes/2025?style=for-the-badge">](https://github.com/thcrt/tattl/pulse)
 [<img alt="Free Palestine Badge" src="https://img.shields.io/badge/Free%20-%20Palestine%20-%20red?style=for-the-badge">](https://bdsmovement.net/)
 
 TATTL is a library that deserializes arbitrary data and validates that it conforms to a type
