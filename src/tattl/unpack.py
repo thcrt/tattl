@@ -48,8 +48,8 @@ def normalize_generic_dict(
 
 
 def normalize_generic[D: (list[Any], dict[str, Any])](
-    t: types.GenericAlias, data: D
-) -> D:
+    t: types.GenericAlias, data: "D"
+) -> "D":
     args = typing.get_args(t)
 
     if isinstance(data, list):
@@ -59,7 +59,9 @@ def normalize_generic[D: (list[Any], dict[str, Any])](
         return normalize_generic_dict(args, data)
 
 
-def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) -> S:
+def unpack_dict[S: DataclassInstance](
+    data: dict[str, Any], structure: type["S"]
+) -> "S":
     """Validates that the type of each :class:`~dataclasses.Field` in :paramref:`structure` matches
     the type of the value it is given in :paramref:`data`.
 
