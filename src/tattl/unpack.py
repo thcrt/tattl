@@ -78,12 +78,20 @@ def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) 
 
     resolved_type_hints = typing.get_type_hints(structure)
 
-    for field in dataclasses.fields(structure):
+    for field in structure.__dataclass_fields__.values():
+        if field.init is False:
+            continue
+
         alias = field.metadata.get("name", field.name)
 
         # It's necessary to use the resolved type hints from `typing.get_type_hints()` in order to
         # satisfy mypy. We could use `field.type`, but that could be a `str`.
         field_type = resolved_type_hints[field.name]
+
+        # De-genericise InitVars
+        if isinstance(field_type, dataclasses.InitVar):
+            field_type = field_type.type
+        
 
         if alias not in data:
             if field.default is not dataclasses.MISSING:
