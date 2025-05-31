@@ -91,7 +91,6 @@ def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) 
         # De-genericise InitVars
         if isinstance(field_type, dataclasses.InitVar):
             field_type = field_type.type
-        
 
         if alias not in data:
             if field.default is not dataclasses.MISSING:
