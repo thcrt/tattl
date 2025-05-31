@@ -98,7 +98,7 @@ def unpack_dict[S: DataclassInstance](data: dict[str, Any], structure: type[S]) 
             elif field.default_factory is not dataclasses.MISSING:
                 unpacked[field.name] = field.default_factory()
             else:
-                raise MissingFieldException
+                raise MissingFieldException(alias)
 
         elif dataclasses.is_dataclass(annotations[field.name]):
             unpacked[field.name] = unpack_dict(data[alias], field_type)
